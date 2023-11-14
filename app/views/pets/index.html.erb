@@ -1,0 +1,11 @@
+<h1>Pets index</h1>
+
+<%= link_to "New pet", new_pet_path %>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <h3><%= link_to pet.name.capitalize, pet_path(pet) %></h3>
+    </li>
+  <% end %>
+</ul>

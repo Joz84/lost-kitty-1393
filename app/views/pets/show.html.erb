@@ -1,0 +1,12 @@
+<h1>Pet: <%= @pet.name.capitalize %></h1>
+
+<h2>Address: <%= @pet.address %></h2>
+<p>Specie: <%= @pet.specie %></p>
+<p>Found on: <%= @pet.found_on %></p>
+
+<%= link_to "edit", edit_pet_path(@pet.id) %>
+<br>
+<%= link_to "Delete",
+  pet_path(@pet),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

@@ -1,0 +1,9 @@
+<h1>Edit Pets</h1>
+
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :specie %> 
+  <%= f.input :found_on %> 
+  <%= f.button :submit %>
+<% end %>
